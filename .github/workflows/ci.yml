@@ -1,0 +1,15 @@
+name: Test CI
+
+on:
+  push:
+    branches: master
+  workflow_dispatch:
+
+jobs:
+  build_windows:
+    runs-on: windows-latest
+    steps:
+    - uses: actions/checkout@master
+    - run: |
+        ./build.ps1 -NoPause
+        bin/test.exe
