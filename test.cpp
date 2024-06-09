@@ -1,3 +1,6 @@
+
+#define _DISABLE_CONSTEXPR_MUTEX_CONSTRUCTOR
+
 #include <mutex>
 #include <iostream>
 int main()
